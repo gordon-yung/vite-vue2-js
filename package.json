@@ -3,11 +3,34 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.vue --max-warnings 0",
+    "lint:fix": "eslint src --ext .js,.vue --fix",
+    "format": "prettier . --write",
+    "check": "npm run lint && npm run format:check"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.25.0",
+    "@vitejs/plugin-vue2": "^2.3.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "less": "^4.6.4",
+    "postcss-preset-env": "^11.3.0",
+    "prettier": "^3.8.4",
+    "vite": "^5.4.21",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "dependencies": {
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5"
+  }
 }
